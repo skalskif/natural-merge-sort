@@ -18,3 +18,19 @@ The records are sorted in ascending order by the sum of the first three sequence
 
 ### Block operations
 Data is read/written in blocks of 40 bytes, each containing five records.
+
+### Results display
+Records are displayed in format: 
+\<first sequence element\> \<sequence common ratio\> \<sum of first three elements\>
+The sum is not saved in the file. File content is displayed before and after sorting. Program also shows how many phases and read/write operations it took. There is also an option to display data after every sorting phase.
+
+## Build
+Build for CMake v.3.26+
+
+```
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
+

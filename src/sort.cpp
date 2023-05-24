@@ -2,8 +2,9 @@
 #include <vector>
 #include <algorithm>
 #include <limits.h>
-#include "sort.h"
-#include "readWrite.h"
+#include <cmath>
+#include "../include/sort.h"
+#include "../include/readWrite.h"
 
 using namespace std;
 

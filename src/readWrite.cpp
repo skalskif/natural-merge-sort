@@ -2,7 +2,8 @@
 #include <fstream>
 #include <string>
 #include <iostream>
-#include "readWrite.h"
+#include <cmath>
+#include "../include/readWrite.h"
 
 using namespace std;
 
@@ -125,7 +126,8 @@ void closeAllStreams() {
 }
 
 void flushWriteBuffers() {
-	if (input->os.is_open() && input->writeBuffer->length) {
+	if (input->writeBuffer->length) {
+		cout << "Written";
 		blockWrite(input);
 	}
 	else {
@@ -145,7 +147,6 @@ void clearData() {
 		remove(tapes.at(i)->name.c_str());
 	}
 	tapes.clear();
-	delete input;
 	input = nullptr;
 	reads = 0;
 	writes = 0;
